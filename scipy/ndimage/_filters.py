@@ -184,6 +184,7 @@ def convolve1d(input, weights, axis=-1, output=None, mode="reflect",
 
 
 def _gaussian_kernel1d(sigma, order, radius):
+    print("HEY")
     """
     Computes a 1-D Gaussian convolution kernel.
     """
@@ -215,7 +216,7 @@ def _gaussian_kernel1d(sigma, order, radius):
 
 
 @_ni_docstrings.docfiller
-def gaussian_filter1d(input, sigma, axis=-1, order=0, output=None,
+def gaussian_filter1dd(input, sigma, axis=-1, order=0, output=None,
                       mode="reflect", cval=0.0, truncate=4.0, *, radius=None):
     """1-D Gaussian filter.
 
@@ -271,6 +272,7 @@ def gaussian_filter1d(input, sigma, axis=-1, order=0, output=None,
     >>> plt.show()
 
     """
+    print("Really")
     sd = float(sigma)
     # make the radius of the filter equal to truncate standard deviations
     lw = int(truncate * sd + 0.5)
